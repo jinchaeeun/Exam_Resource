@@ -2,6 +2,7 @@ package com.example.exam_resource;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView     msgETXT;
     //private LinearLayout linearLAY = findViewById(R.id.linearLAY); 이건 불가능함 선언과 동시에 X
     // private Random      random= new Random();  //이건 UI 요소와 상관 없으니까 가능함
-
+    private Resources   appRes;
+    //private Resources   appRes=this.getResources(); //xml res 자원 접근객체  레이아웃과 상관 없어서 이렇게도 가능
 
     //Member Method - AppCompatActivity's override --------------------
 
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         linearLAY = findViewById(R.id.linearLAY);
         msgTXT = findViewById(R.id.msgTXT);
         msgETXT = findViewById(R.id.msgETXT);
+
+        appRes = this.getResources();
 
     }
 
@@ -56,10 +60,12 @@ public class MainActivity extends AppCompatActivity {
             if(newmsg.length()>0)
                 msgTXT.setText(newmsg);
             else
-                msgTXT.setText("Nothing");
+                //msgTXT.setText("Nothing");
+                //Java에서 resource 자원 데이터 사용
+                //Resources 클래스 <-- getResources()
+                msgTXT.setText(appRes.getString(R.string.nothing)); //하드코딩 안하고 xml에 있는 데이터를 쓸 수 있다.
 
-            //Java에서 resource 자원 데이터 사용
-            //Resources 클래스 <-- getResources()
+
 
 
 
