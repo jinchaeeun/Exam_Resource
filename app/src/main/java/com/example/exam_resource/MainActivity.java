@@ -63,7 +63,15 @@ public class MainActivity extends AppCompatActivity {
                 //msgTXT.setText("Nothing");
                 //Java에서 resource 자원 데이터 사용
                 //Resources 클래스 <-- getResources()
-                msgTXT.setText(appRes.getString(R.string.nothing)); //하드코딩 안하고 xml에 있는 데이터를 쓸 수 있다.
+                //getDrawable()
+                msgTXT.setText(appRes.getString(R.string.nothing)); //하드코딩 안하고 xml에 있는 데이터를 쓸 수 있다..
+
+            /* 설명 */
+            //객체 java - findviewvyid, xml - view(text, Button, Layout...)
+            //getResources()  <--Resources-- xml - drawable, string, color, ...
+            // -getString()
+            // -getDrawble()
+
 
 
 

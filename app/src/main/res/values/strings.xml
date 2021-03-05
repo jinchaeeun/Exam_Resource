@@ -2,4 +2,6 @@
     <string name="app_name">Exam_Resource</string>
     <string name="message">Enter message:</string>
     <string name="nothing">NOTHING~!!!</string>
+    <string name="changeBTN">change</string>
+    <string name="skyIMG">IMGView</string>
 </resources>
